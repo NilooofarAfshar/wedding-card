@@ -1,0 +1,675 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* wedding style */
+
+@font-face {
+  font-family: "YekanBakhMedium";
+  src: url("../fonts/fa/YekanBakhMedium.eot") format("embedded-opentype"),
+    url("../fonts/fa/YekanBakhMedium.woff") format("woff"), url("../fonts/fa/YekanBakhMedium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "iranYekan";
+  src: url("../fonts/iranYekean/IRANYekanWebDotinFaNum.eot") format("embedded-opentype"),
+    url("../fonts/iranYekean/IRANYekanWebDotinFaNum.woff") format("woff"),
+    url("../fonts/iranYekean/IRANYekanWebDotinFaNum.ttf") format("truetype"),
+    url("../fonts/iranYekean/IRANYekanWebDotinFaNum.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "nastaliq";
+  src: url("../fonts/nastaliq/Shekasteh.eot") format("embedded-opentype"),
+    url("../fonts/nastaliq/Shekasteh.woff") format("woff"), url("../fonts/nastaliq/Shekasteh.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  box-sizing: border-box;
+  font-family: iranYekan;
+  font-size: 13px;
+  direction: rtl;
+  overflow-x: hidden;
+  background-color: rgba(214, 206, 183, 0.1);
+}
+
+.container {
+  width: 900px;
+  margin: auto;
+  margin-top: 70px;
+}
+.wedding-top-header {
+  background-color: #d7ceb7;
+  width: 100%;
+  height: 45px;
+  position: relative;
+  text-align: center;
+}
+.wedding-top-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 3px;
+  height: 1px;
+  width: 100%;
+  background-color: #cab89e;
+}
+.wedding-top-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 1px;
+  width: 100%;
+  background-color: #cab89e;
+}
+.wedding-top-header .wedding-logo {
+  position: absolute;
+  width: 355px;
+  left: 50%;
+  margin-left: -177.5px;
+  top: 13px;
+  z-index: 1;
+}
+.wedding-top-header p {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  padding-top: 58px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #d8ceb7;
+  letter-spacing: 1px;
+  line-height: 18px;
+}
+.wedding-top-header p span {
+  display: block;
+}
+.wedding-date {
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #93886c;
+}
+.wedding-date p {
+  margin: 0;
+}
+.wedding-date p span {
+  margin-right: 3px;
+}
+
+.wedding-menu {
+  list-style: none;
+  text-align: center;
+  padding: 8px;
+  margin: 0;
+  margin-top: 8px;
+  background-color: #f5f3ed;
+  border: 1px dashed #a89e7a;
+}
+.wedding-menu li {
+  display: inline-block;
+}
+.wedding-menu li a {
+  text-decoration: none;
+  padding: 0 10px;
+  color: #9d8781;
+}
+.slid-image {
+  margin-top: 16px;
+}
+.slid-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.wedding-text {
+  padding: 10px;
+  background-color: #665450;
+  text-align: center;
+  color: #d8ceb7;
+  font-size: 12px;
+  position: relative;
+}
+.wedding-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 3px;
+  height: 1px;
+  width: 100%;
+  border-top: 1px dashed #d8ceb7;
+}
+.wedding-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+  height: 1px;
+  width: 100%;
+  border-top: 1px dashed #d8ceb7;
+}
+.wedding-text p img {
+  width: 15px;
+  margin-left: 3px;
+}
+.wedding-content {
+  background: #fff;
+  max-width: 680px;
+  padding: 48px 100px;
+  -webkit-box-shadow: 0px 3px 24px 0px rgb(0 0 0 / 6%);
+  box-shadow: 0px 3px 24px 0px rgb(0 0 0 / 6%);
+  text-align: center;
+  margin: 60px auto;
+  position: relative;
+  box-sizing: border-box;
+}
+.wedding-content .right-vec {
+  background: url(../img/invitation-right-image.png) center center/cover no-repeat local;
+  width: 400px;
+  height: 508px;
+  position: absolute;
+  right: -120px;
+  bottom: -100px;
+  z-index: -1;
+}
+.wedding-content .left-vec {
+  background: url(../img/invitation-left-img.png) center center/cover no-repeat local;
+  width: 220px;
+  height: 414px;
+  position: absolute;
+  left: -150px;
+  top: -100px;
+  z-index: -1;
+}
+.wedding-content::before {
+  content: "";
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  border: 5px solid rgb(231 227 225);
+}
+.wedding-content h1 {
+  text-align: center;
+  position: relative;
+  padding: 45px 0;
+  padding-bottom: 30px;
+  margin: 0;
+}
+.wedding-content h1 span {
+  color: #434343;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+  font-family: nastaliq;
+  font-size: 30px;
+}
+.wedding-content .top-header {
+  left: 50%;
+  position: absolute;
+  transform: rotate(180deg);
+  margin-left: -234.5px;
+  top: 16px;
+}
+
+.wedding-content .botton-header {
+  left: 50%;
+  position: absolute;
+  margin-left: -234.5px;
+  bottom: 6px;
+}
+.wedding-content p {
+  text-align: center;
+  line-height: 32px;
+}
+.wedding-content .congratulation {
+  font-size: 26px;
+  font-family: nastaliq;
+  line-height: 58px;
+  color: #5f4618;
+  margin-top: 0;
+}
+.wedding-time {
+  margin-bottom: 100px;
+}
+.wedding-time #countdown {
+  position: relative;
+}
+.wedding-time h1,
+.wedding-address h1 {
+  color: #434343;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+  font-family: nastaliq;
+  font-size: 30px;
+  text-align: center;
+}
+.wedding-time p,
+.wedding-address p {
+  color: #434343;
+  margin: 35px 0;
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+.wedding-time ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.wedding-time ul li {
+  font-size: 10px;
+  background-color: #edebe7;
+  width: 125px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wedding-time ul li span {
+  margin-left: 8px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.wedding-time .top-header {
+  left: 50%;
+  position: absolute;
+  transform: rotate(180deg);
+  margin-left: -234.5px;
+  top: -37px;
+}
+.wedding-time .botton-header {
+  left: 50%;
+  position: absolute;
+  margin-left: -234.5px;
+  bottom: -37px;
+}
+.wedding-address {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.wedding-address .map-div {
+  position: relative;
+}
+.wedding-address .map-div .top-header {
+  left: 50%;
+  position: absolute;
+  transform: rotate(180deg);
+  margin-left: -234.5px;
+  top: -37px;
+}
+.wedding-address .map-div .botton-header {
+  left: 50%;
+  position: absolute;
+  margin-left: -234.5px;
+  bottom: -37px;
+}
+.wedding-address .map-div .map {
+  margin: auto;
+  width: 580px;
+  padding: 8px;
+  border: 1px solid #eee;
+}
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .slid-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 680px) {
+  .wedding-content {
+    width: 95%;
+  }
+  .wedding-content .top-header {
+    top: 26px;
+    width: 330px;
+    margin-left: -165px;
+  }
+
+  .wedding-content .botton-header {
+    width: 330px;
+    margin-left: -165px;
+    bottom: 15px;
+  }
+  .wedding-time .top-header {
+    width: 330px;
+    margin-left: -165px;
+    top: -26px;
+  }
+  .wedding-time .botton-header {
+    width: 330px;
+    margin-left: -165px;
+    bottom: -26px;
+  }
+}
+
+@media (max-width: 530px) {
+  .wedding-content {
+    width: 98%;
+    padding: 48px 85px;
+  }
+  .wedding-content .congratulation {
+    font-size: 18px;
+    line-height: 50px;
+  }
+  .wedding-content h1 {
+    padding: 35px 0;
+  }
+  .wedding-content h1 span {
+    font-size: 24px;
+  }
+  .wedding-time h1,
+  .wedding-address h1 {
+    font-size: 24px;
+  }
+  .wedding-date {
+    flex-direction: column;
+    align-items: center;
+  }
+  .wedding-date p {
+    margin-bottom: 8px;
+  }
+  .wedding-date p:first-child {
+    margin-top: 32px;
+  }
+  .wedding-text {
+    font-size: 10px;
+  }
+  .wedding-time ul li {
+    width: 100px;
+    height: 75px;
+  }
+  .wedding-time ul li span {
+    font-size: 20px;
+  }
+  .wedding-content .botton-header {
+    width: 294px;
+    margin-left: -147px;
+    bottom: 17px;
+  }
+  .wedding-content .top-header {
+    top: 28px;
+    width: 294px;
+    margin-left: -147px;
+  }
+  .wedding-content .right-vec {
+    right: -50px;
+    bottom: -105px;
+  }
+  .wedding-content .left-vec {
+    left: -16px;
+    top: -147px;
+  }
+}
